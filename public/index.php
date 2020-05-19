@@ -4,10 +4,13 @@ require_once "../vendor/core/Router.php";
 require_once "../vendor/libs/functions.php";
 
 
-Router::add("bla", ["controller" => "Posts", "action"=>"add"]);
-Router::add("bla/doc", ["controller" => "Doc", "action"=>"remove"]);
-$param = rtrim($_SERVER["QUERY_STRING"],"/");
-Router::matchRoute($param);
 
-debug(Router::getRoute());
+Router::add('#^$#', ["controller" => "Main", "action"=>"index"]);
+
+Router::add('#^(?P<controller>[a-z-]+)/?(?P<action>[a-z-]+)?$#i');
+$param = rtrim($_SERVER["QUERY_STRING"],"/");
+Router::dispatch($param);
+
+//debug(Router::getRoute());
+//debug(Router::getRoutes());
 //echo

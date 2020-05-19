@@ -20,13 +20,25 @@ class Router
 
     public static function matchRoute($url){
         foreach (self::$routes as $pattern=>$route){
-            if($url == $pattern){
-                self::$route = $route;
+            if(preg_match($pattern, $url,$matches)){
+                if($url ===""){
+                    self::$route = $route;
+                    return true;
+                }
+                $result = ["controller" => $matches["controller"],"action" => $matches["action" ]];
+                self::$route = $result;
                 return true;
             }
         }
-        echo 404;
         return false;
+    }
+    public static function dispatch($url){
+        if(self::matchRoute($url)){
+            echo "OK";
+        }else{
+            http_response_code(404);
+            include "404.html";
+        }
     }
 
 }
