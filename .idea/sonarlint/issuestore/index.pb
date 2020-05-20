@@ -9,3 +9,9 @@ I
 public/.htaccess,c\9\c9fe70f275af093c7fb3ed73b451fadc91069bac
 F
 vendor/core/Router.php,a\f\af2f8d6afa82a2cf03833bf6f497dada63fdbf50
+K
+app/controllers/PostNew.php,9\a\9a3cb8a96382ef7e6923cf00d87d5796c2868eb0
+I
+app/controllers/Posts.php,6\0\60f5abffd429acbea7620a6a2fa179ddd90b5c28
+H
+app/controllers/Main.php,5\7\575607f94f7d23fdcd8f95269d77b4912201a024
