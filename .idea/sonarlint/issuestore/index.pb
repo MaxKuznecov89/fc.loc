@@ -15,3 +15,7 @@ I
 app/controllers/Posts.php,6\0\60f5abffd429acbea7620a6a2fa179ddd90b5c28
 H
 app/controllers/Main.php,5\7\575607f94f7d23fdcd8f95269d77b4912201a024
+?
+public/404.html,9\1\9165de4c08ed7f75a6e91e356e892f20aa817eb8
+?
+config/init.php,2\2\22c288a7d91926c7d21fade6bf901c8fcada7bb8

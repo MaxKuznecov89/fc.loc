@@ -1,5 +1,5 @@
 <?php
-
+namespace app\controllers;
 
 class PostNew
 {

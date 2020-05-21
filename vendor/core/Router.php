@@ -1,5 +1,6 @@
 <?php
 
+namespace vendor\core;
 
 class Router
 {
@@ -40,7 +41,7 @@ class Router
     public static function dispatch($url){
         if(self::matchRoute($url)){
             $controller = self::upperCamelCase(self::$route['controller']);
-
+//            $instans = new $controller();
             if(class_exists($controller)){
                 $inst = new $controller();
                 $action = self::lowerFirstUpperNext(self::$route['action']) . "Action";
@@ -48,11 +49,12 @@ class Router
                 if(method_exists($inst, $action)){
                     $inst->$action();
                     echo "<br>OK";
-                }else{
+                } else{
                     echo "Method $action is not exists!";
                 }
 
-            }else{
+            }
+            else{
                 echo "class not exists";
 
             }
