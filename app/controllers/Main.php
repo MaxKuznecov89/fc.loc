@@ -10,7 +10,7 @@ class Main
         echo "Main:test";
     }
     public function testPageAction(){
-        echo "Main:testPage";
+        echo "olala";
     }
 
 }

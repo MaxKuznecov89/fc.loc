@@ -38,10 +38,12 @@ class Router
         }
         return false;
     }
+
     public static function dispatch($url){
         if(self::matchRoute($url)){
-            $controller = self::upperCamelCase(self::$route['controller']);
-//            $instans = new $controller();
+            $controller = "app\controllers\\" . self::upperCamelCase(self::$route['controller']);
+
+
             if(class_exists($controller)){
                 $inst = new $controller();
                 $action = self::lowerFirstUpperNext(self::$route['action']) . "Action";
@@ -56,16 +58,13 @@ class Router
             }
             else{
                 echo "class not exists";
-
             }
-
-
-//            echo "OK";
         }else{
             http_response_code(404);
             include "404.html";
         }
     }
+
     protected static function upperCamelCase($controller){
 
         $controllerArr =  explode("-", $controller);
@@ -75,6 +74,7 @@ class Router
         }
         return $controller;
     }
+
     protected static function lowerFirstUpperNext($action){
       return lcfirst(self::upperCamelCase($action));
     }
