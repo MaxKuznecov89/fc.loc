@@ -19,3 +19,11 @@ H
 public/404.html,9\1\9165de4c08ed7f75a6e91e356e892f20aa817eb8
 ?
 config/init.php,2\2\22c288a7d91926c7d21fade6bf901c8fcada7bb8
+L
+app/views/Posts/testPage.php,3\a\3a7e47948a06a078cef4981ccca04b9773e500e0
+H
+app/views/Posts/test.php,7\9\794e066737491cc2148e464857b40418e7abbc04
+I
+app/views/Posts/index.php,0\c\0c4064c0760a9e01071631c5d7849605ae452d2d
+O
+vendor/core/base/Controller.php,2\6\2670a529cb376f2285718adc8d9a55bed4e51e49

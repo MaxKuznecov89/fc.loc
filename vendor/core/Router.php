@@ -25,13 +25,14 @@ class Router
 
                foreach ($matches as $key => $value){
                    if(is_string($key)){
-                       $route[$key] = $value;
+                            $route[$key] = $value;
                    }
                }
 
                 if(!isset($route["action"])){
                     $route["action"] = "index";
                 }
+                $route["controller"] = self::upperCamelCase($route["controller"]);
                 self::$route = $route;
                 return true;
             }
@@ -41,11 +42,10 @@ class Router
 
     public static function dispatch($url){
         if(self::matchRoute($url)){
-            $controller = "app\controllers\\" . self::upperCamelCase(self::$route['controller']);
-
+            $controller = "app\controllers\\" . self::$route['controller'];
 
             if(class_exists($controller)){
-                $inst = new $controller();
+                $inst = new $controller(self::$route);
                 $action = self::lowerFirstUpperNext(self::$route['action']) . "Action";
 
                 if(method_exists($inst, $action)){
