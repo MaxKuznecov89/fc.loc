@@ -20,9 +20,12 @@ class Router
     }
 
     public static function matchRoute($url){
+
+        $url = self::urlFreeGetParam($url);
+
+
         foreach (self::$routes as $pattern=>$route){
             if(preg_match($pattern, $url,$matches)){
-
                foreach ($matches as $key => $value){
                    if(is_string($key)){
                             $route[$key] = $value;
@@ -32,6 +35,7 @@ class Router
                 if(!isset($route["action"])){
                     $route["action"] = "index";
                 }
+
                 $route["controller"] = self::upperCamelCase($route["controller"]);
                 self::$route = $route;
                 return true;
@@ -77,5 +81,19 @@ class Router
 
     protected static function lowerFirstUpperNext($action){
       return lcfirst(self::upperCamelCase($action));
+    }
+
+    protected static function urlFreeGetParam($url){
+        if(false != $url){
+            
+            $arr = explode("&", $url,2);
+
+            if(stripos ($arr[0],"=") !== false){
+                return "";
+            }
+            return rtrim($arr[0], "/");
+        }
+
+        return $url;
     }
 }
