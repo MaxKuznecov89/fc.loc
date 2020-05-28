@@ -1,7 +1,7 @@
 <?php
 namespace app\controllers;
 
-class PostNew
+class PostNew extends App
 {
     public function indexAction(){
         echo "PostNew:index";

@@ -1,12 +1,13 @@
 <?php
 namespace app\controllers;
 
-use vendor\core\base\Controller;
 
-class Posts extends Controller
+
+class Posts extends App
 {
     public function indexAction(){
         echo "Posts:index";
+        var_dump($this->route);
     }
     public function testAction(){
         echo "Posts:test";

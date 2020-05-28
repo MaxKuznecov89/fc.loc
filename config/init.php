@@ -7,6 +7,6 @@ define("CORE", ROOT.'/vendor/core' );
 define("LIBS", ROOT.'/vendor/libs' );
 //define("CACHE", ROOT.'/tmp/cache' );
 define("CONF", ROOT.'/config' );
-//define("LAYOUT", 'default' );
+define("LAYOUT", 'default' );
 //define("PATH",  "{$_SERVER['REQUEST_SCHEME']}://{$_SERVER['HTTP_HOST']}");
 //define("ADMIN",  PATH . '/admin');

@@ -27,3 +27,9 @@ I
 app/views/Posts/index.php,0\c\0c4064c0760a9e01071631c5d7849605ae452d2d
 O
 vendor/core/base/Controller.php,2\6\2670a529cb376f2285718adc8d9a55bed4e51e49
+I
+vendor/core/base/View.php,3\2\324c10059c1c24b27c090cef4b435ae01ed6fe47
+G
+app/controllers/App.php,9\8\9848401f00d5bd6cd7ac0eac6cb62d554cd60b38
+H
+app/controllers/Page.php,2\8\2823ac905fbe738966e810c3f7f0a53675a2eeb4
