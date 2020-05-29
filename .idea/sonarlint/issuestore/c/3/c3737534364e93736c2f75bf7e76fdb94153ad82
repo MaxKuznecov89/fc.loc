@@ -1,0 +1,59 @@
+
+fjavascript:S905"FExpected an assignment or function call and instead saw an expression.(šÓçÓÿÿÿÿÿ
+wjavascript:S3776
+"VRefactor this function to reduce its Cognitive Complexity from 1478 to the 15 allowed.(«¹…øÿÿÿÿ
+Ojavascript:S1539
+".'use strict' is unnecessary inside of modules.(«¹…øÿÿÿÿ
+@javascript:S121" Expected { after 'if' condition.(¼ô‘Çùÿÿÿÿ
+@javascript:S121" Expected { after 'if' condition.(×¹û½ıÿÿÿÿ
+@javascript:S121" Expected { after 'if' condition.(Àœõ‡şÿÿÿÿ
+;javascript:S1213" Expected { after 'if' condition.(öœåá
+Ujavascript:S3513="9Use the rest syntax to declare this function's arguments.(ÓÀà¡
+3javascript:S109@"No magic number: 2.(…âìˆûÿÿÿÿ
+Ujavascript:S3513t"9Use the rest syntax to declare this function's arguments.(Ùôİî
+/javascript:S109ş"No magic number: 2.(¨•÷Ğ
+Qjavascript:S1117 "/'Alert' is already declared in the upper scope.(ìùê£øÿÿÿÿ
+Mjavascript:S1117Â"0'Button' is already declared in the upper scope.(¸×
+jjavascript:S134Ô"NRefactor this code to not nest more than 3 if/for/while/switch/try statements.(ÅÚÁÈ
+jjavascript:S134á"NRefactor this code to not nest more than 3 if/for/while/switch/try statements.(ğÌ½‰
+Tjavascript:S1117´"2'Carousel' is already declared in the upper scope.(›ğ¹ÿÿÿÿÿ
+:javascript:S126à"Add the missing "else" clause.(Å’¸Í
+Qjavascript:S1117ƒ"/'event' is already declared in the upper scope.(Ÿß³ûÿÿÿÿ
+?javascript:S126Ş"Add the missing "else" clause.(‡°ÒÅùÿÿÿÿ
+Njavascript:S1117Ø	"2'Collapse' is already declared in the upper scope.(£Ä¾Q
+jjavascript:S134ë
+"NRefactor this code to not nest more than 3 if/for/while/switch/try statements.(á«Áë
+Tjavascript:S1117×"2'Dropdown' is already declared in the upper scope.(ÕÚœÿÿÿÿÿ
+?javascript:S126™"Add the missing "else" clause.(ò¢É¡øÿÿÿÿ
+?javascript:S126’"Add the missing "else" clause.(ßÑÿÿÿÿÿ
+Kjavascript:S1117É"/'Modal' is already declared in the upper scope.(æŠğ
+Qjavascript:S1117±"/'event' is already declared in the upper scope.(òœ¯êüÿÿÿÿ
+?javascript:S126½"Add the missing "else" clause.(º®´Äúÿÿÿÿ
+?javascript:S126Á"Add the missing "else" clause.(µ›Êøüÿÿÿÿ
+Ujavascript:S1117"8'callbackRemove' is already declared in the upper scope.(†¾è
+?javascript:S126­"Add the missing "else" clause.(¾±Íıÿÿÿÿ
+Tjavascript:S1117×"7'actualPadding' is already declared in the upper scope.(¡îĞ±
+]javascript:S1117Ø";'calculatedPadding' is already declared in the upper scope.(ºÁÏ÷ùÿÿÿÿ
+Sjavascript:S1117î"1'padding' is already declared in the upper scope.(ÇÖ¥µùÿÿÿÿ
+?javascript:S126"Add the missing "else" clause.(àÄ¶ÿÿÿÿÿ
+Pjavascript:S3801Ã"4Refactor this function to use "return" consistently.(×Ë‘~
+Gjavascript:S1117Ã"+'i' is already declared in the upper scope.(×Ë‘~
+Gjavascript:S1172Ã"+Remove the unused function parameter "len".(×Ë‘~
+Ijavascript:S1117Ã"-'len' is already declared in the upper scope.(×Ë‘~
+Ajavascript:S121Ø" Expected { after 'if' condition.(Õ¥œîşÿÿÿÿ
+Njavascript:S1117´"1'Tooltip' is already declared in the upper scope.(ŠáÒ¨
+Ojavascript:S1117Å"2'complete' is already declared in the upper scope.(á½œ±
+?javascript:S126–"Add the missing "else" clause.(Æ¸ŸŠÿÿÿÿÿ
+Njavascript:S1117Ø"1'Popover' is already declared in the upper scope.(’¤°
+Vjavascript:S3513Ù"9Use the rest syntax to declare this function's arguments.(—µ°
+Ujavascript:S1117†"3'ScrollSpy' is already declared in the upper scope.(æ¢ôŸıÿÿÿÿ
+]javascript:S881"<Extract this decrement operation into a dedicated statement.(íç’Œıÿÿÿÿ
+]javascript:S881ê"<Extract this decrement operation into a dedicated statement.(ãƒôâşÿÿÿÿ
+Jjavascript:S1117¢"-'Tab' is already declared in the upper scope.(İÑ­ù
+Ljavascript:S1117†!"/'Toast' is already declared in the upper scope.(¯¯§Ÿ
+=javascript:S909ï"!Remove this "continue" statement.(ÉŠ©ƒ
+=javascript:S909õ"!Remove this "continue" statement.(ÉŠ©ƒ
+=javascript:S909ù"!Remove this "continue" statement.(ÉŠ©ƒ
+=javascript:S909€"!Remove this "continue" statement.(ÉŠ©ƒ
+Bjavascript:S909Ø"!Remove this "continue" statement.(Õ¥œîşÿÿÿÿ
+ejavascript:S3358"DExtract this nested ternary operation into an independent statement.(Ÿ‚êíúÿÿÿÿ

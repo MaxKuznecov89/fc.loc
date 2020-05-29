@@ -13,7 +13,6 @@ abstract class Controller
 
     public function __construct($route)
     {
-        echo 5;
         $this->route = $route;
         $this->view = $route['action'];
 

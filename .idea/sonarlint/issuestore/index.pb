@@ -33,3 +33,9 @@ G
 app/controllers/App.php,9\8\9848401f00d5bd6cd7ac0eac6cb62d554cd60b38
 H
 app/controllers/Page.php,2\8\2823ac905fbe738966e810c3f7f0a53675a2eeb4
+H
+app/views/Main/index.php,7\4\743e6631087f497abdae1d13a5193fb85103ebd5
+P
+ public/bootstrap/js/bootstrap.js,c\3\c3737534364e93736c2f75bf7e76fdb94153ad82
+L
+app/views/layout/default.php,2\1\2197dd9bff3d4bed91b07e6d88774ea223ddf73f

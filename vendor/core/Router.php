@@ -55,7 +55,7 @@ class Router
                 if(method_exists($inst, $action)){
                     $inst->$action();
                     $inst->getView();
-                    echo "<br>OK";
+//
                 } else{
                     echo "Method $action is not exists!";
                 }
