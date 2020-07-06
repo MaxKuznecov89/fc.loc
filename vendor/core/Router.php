@@ -48,7 +48,7 @@ class Router
 
         $url = self::urlFreeGetParam($url);
         if(self::matchRoute($url)){
-            $controller = "app\controllers\\" . self::$route['controller'];
+            $controller = "app\controllers\\" . self::$route['controller'] . "Controller";
 
             if(class_exists($controller)){
                 $inst = new $controller(self::$route);

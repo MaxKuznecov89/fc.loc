@@ -1,19 +1,16 @@
 <?php
 namespace app\controllers;
 
-
-
-class Posts extends App
+class PostNewController extends AppController
 {
     public function indexAction(){
-        echo "Posts:index";
-        var_dump($this->route);
+        echo "PostNew:index";
     }
     public function testAction(){
-        echo "Posts:test";
+        echo "PostNew:test";
     }
     public function testPageAction(){
-        echo "Posts:testPage";
+        echo "PostNew:testPage";
     }
 
 }

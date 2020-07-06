@@ -6,37 +6,51 @@ namespace vendor\core\base;
 
 class View
 {
-    public $route =[];
+    public $route = [];
     public $view;
     public $layout;
 
-    public function __construct($route,$layout='',$view='')
+    public function __construct($route, $layout = '', $view = '')
     {
+
         $this->route = $route;
-        $this->layout = $layout ?: LAYOUT;
+        if ($layout === false) {
+            $this->layout = false;
+        } else {
+            $this->layout = $layout ?: LAYOUT;
+        }
         $this->view = $view;
     }
 
-    public function render(){
-
+    public function render($vars)
+    {
+       if(is_array($vars)) {
+           extract($vars);
+       }
 
         $pathView = APP . "/views/{$this->route['controller']}/{$this->view}.php";
-        $pathLayout = APP ."/views/layout/{$this->layout}.php";
+
 
         ob_start();
 
-        if(file_exists($pathView)){
+        if (file_exists($pathView)) {
+
             include "$pathView";
-        }else{
+        } else {
             echo "<p>View <b>$pathView</b> not found</p>";
         }
 
         $view = ob_get_clean();
 
-        if(file_exists($pathLayout)){
-            include "$pathLayout";
-        }else{
-            echo "<p>Layout <b>$pathLayout</b> not found</p>";
+        if ($this->layout !== false) {
+            $pathLayout = APP . "/views/layout/{$this->layout}.php";
+
+            if (file_exists($pathLayout)) {
+                include "$pathLayout";
+            } else {
+                echo "<p>Layout <b>$pathLayout</b> not found</p>";
+            }
+
         }
 
 

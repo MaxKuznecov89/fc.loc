@@ -2,17 +2,18 @@
 namespace app\controllers;
 
 
-class Main extends App
+
+class PostsController extends AppController
 {
     public function indexAction(){
-        echo "Main:index";
+        echo "Posts:index";
+
     }
     public function testAction(){
-        $this->layout = "mainTest";
-//        $this->view = "bla";
+        echo "Posts:test";
     }
     public function testPageAction(){
-        echo "olala";
+        echo "Posts:testPage";
     }
 
 }
