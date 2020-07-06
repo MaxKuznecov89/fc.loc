@@ -8,7 +8,8 @@ class Main extends App
         echo "Main:index";
     }
     public function testAction(){
-        echo "Main:test";
+        $this->layout = "mainTest";
+//        $this->view = "bla";
     }
     public function testPageAction(){
         echo "olala";

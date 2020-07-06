@@ -8,7 +8,7 @@ class Router
     protected static $route=[];
 
     public static function add($regexp, $route=[]){
-        self::$routes[$regexp] = $route;
+            self::$routes[$regexp] = $route;
 }
 
     public static function getRoutes(){
@@ -21,7 +21,7 @@ class Router
 
     public static function matchRoute($url){
 
-        $url = self::urlFreeGetParam($url);
+
 
 
         foreach (self::$routes as $pattern=>$route){
@@ -45,6 +45,8 @@ class Router
     }
 
     public static function dispatch($url){
+
+        $url = self::urlFreeGetParam($url);
         if(self::matchRoute($url)){
             $controller = "app\controllers\\" . self::$route['controller'];
 
