@@ -11,6 +11,8 @@
 
 
 <?=$view?>
+<?=debug(\vendor\core\Db::$countSql)?>
+<?= debug(\vendor\core\Db::$queries)?>
 
 
 

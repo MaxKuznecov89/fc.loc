@@ -1,29 +1,19 @@
 <?php
 namespace app\controllers;
-
+use app\model\Main;
 
 class MainController extends AppController
 {
-//    public function __construct($route)
-//    {
-//        parent::__construct($route);
-//        $this->layout = "mainTest";
-//        $this->view = "bla";
-//
-//    }
 
     public function indexAction(){
-        echo "Main:index";
+        $instDb = new Main();
+        $arrData = $instDb->findAll();
+
+        $name = $arrData[0]["name"];
+        $age = $arrData[0]["age"];
+
+        $this->set(compact("name","age"));
     }
-    public function testAction(){
-        $sex = "man";
-        $age = 36;
-        $this->view = "bla";
-        $this->set(compact("sex","age"));
-        debug($this->vars);
-    }
-    public function testPageAction(){
-        echo "olala";
-    }
+
 
 }

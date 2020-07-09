@@ -9,12 +9,6 @@ I
 public/.htaccess,c\9\c9fe70f275af093c7fb3ed73b451fadc91069bac
 F
 vendor/core/Router.php,a\f\af2f8d6afa82a2cf03833bf6f497dada63fdbf50
-K
-app/controllers/PostNew.php,9\a\9a3cb8a96382ef7e6923cf00d87d5796c2868eb0
-I
-app/controllers/Posts.php,6\0\60f5abffd429acbea7620a6a2fa179ddd90b5c28
-H
-app/controllers/Main.php,5\7\575607f94f7d23fdcd8f95269d77b4912201a024
 ?
 public/404.html,9\1\9165de4c08ed7f75a6e91e356e892f20aa817eb8
 ?
@@ -29,10 +23,6 @@ O
 vendor/core/base/Controller.php,2\6\2670a529cb376f2285718adc8d9a55bed4e51e49
 I
 vendor/core/base/View.php,3\2\324c10059c1c24b27c090cef4b435ae01ed6fe47
-G
-app/controllers/App.php,9\8\9848401f00d5bd6cd7ac0eac6cb62d554cd60b38
-H
-app/controllers/Page.php,2\8\2823ac905fbe738966e810c3f7f0a53675a2eeb4
 H
 app/views/Main/index.php,7\4\743e6631087f497abdae1d13a5193fb85103ebd5
 P
@@ -43,3 +33,13 @@ M
 app/views/layout/mainTest.php,a\d\ad63e2df3b323974bace62b4d29b5e03a7dd1c55
 F
 app/views/Main/bla.php,f\c\fc2efd117b88d0a5ba30effc2d51a93455cd9ca7
+R
+"app/controllers/PageController.php,3\0\3016803478afacc42ab5583358030ce9b1f427da
+U
+%app/controllers/PostNewController.php,3\8\38afa7557e217cf79f10380d960d61a65e77b81b
+S
+#app/controllers/PostsController.php,f\b\fbf026c679912e31335aa6eef4d8f9e0684c0762
+Q
+!app/controllers/AppController.php,f\a\fad30ced76741eed466831247068b50315fcedee
+R
+"app/controllers/MainController.php,3\0\3091a6993576f159ad3fa3d926d4ee2431787193
