@@ -20,17 +20,18 @@ class Db
         $this->pdo = new \PDO($conf["dsn"],$conf["userName"],$conf["password"],$arrOptions);
 
     }
-    public function execute($sql){
+    public function execute($sql,$pram=[]){
         self::$countSql++;
         self::$queries[]=$sql;
         $stmt = $this->pdo->prepare($sql);
-        return $stmt->execute();
+        return $stmt->execute($pram);
 
     }
 
-public function query($sql){
+public function query($sql,$pram=[]){
     $stmt = $this->pdo->prepare($sql);
-    $res =  $stmt->execute();
+    $res =  $stmt->execute($pram);
+
     self::$countSql++;
     self::$queries[]=$sql;
     if($res !== false){

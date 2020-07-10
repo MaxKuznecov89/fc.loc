@@ -2,6 +2,7 @@
 error_reporting(-1);
 use vendor\core\Router;
 require_once "../vendor/libs/functions.php";
+require_once "../vendor/libs/rb-mysql.php";
 require_once "../config/init.php";
 spl_autoload_register(function ($className){
 
