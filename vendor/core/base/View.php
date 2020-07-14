@@ -30,7 +30,6 @@ class View
 
         $pathView = APP . "/views/{$this->route['controller']}/{$this->view}.php";
 
-
         ob_start();
 
         if (file_exists($pathView)) {

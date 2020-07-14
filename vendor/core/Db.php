@@ -12,12 +12,14 @@ class Db
     public static $queries = [];
     private function __construct()
     {
-        $conf = require CONF . "/config_db.php";
-        $arrOptions = [\PDO::ATTR_ERRMODE=>\PDO::ERRMODE_EXCEPTION,
-            \PDO::ATTR_DEFAULT_FETCH_MODE=>\PDO::FETCH_ASSOC
-            ];
+        $confDb = require CONF . "/config_db.php";
+        require_once LIBS . "/rb-mysql.php";
+        \R::setup($confDb["dsn"],$confDb["userName"],$confDb["password"]);
+        \R::freeze(true);
 
-        $this->pdo = new \PDO($conf["dsn"],$conf["userName"],$conf["password"],$arrOptions);
+//        \R::fancyDebug(TRUE);
+
+
 
     }
     public function execute($sql,$pram=[]){

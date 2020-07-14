@@ -7,12 +7,10 @@
     <title>DEFAULT</title>
 </head>
 <body>
-<h1>Hello, world!</h1>
+<h1>Hello, world</h1>
 
 
 <?=$view?>
-<?=debug(\vendor\core\Db::$countSql)?>
-<?= debug(\vendor\core\Db::$queries)?>
 
 
 

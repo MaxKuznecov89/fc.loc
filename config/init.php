@@ -5,6 +5,7 @@ define("WWW", ROOT.'/pubic' );
 define("APP", ROOT.'/app' );
 define("CORE", ROOT.'/vendor/core' );
 define("LIBS", ROOT.'/vendor/libs' );
+define("CACHE", ROOT.'/temp/cache' );
 //define("CACHE", ROOT.'/tmp/cache' );
 define("CONF", ROOT.'/config' );
 define("LAYOUT", 'default' );
