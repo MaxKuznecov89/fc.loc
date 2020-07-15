@@ -7,14 +7,22 @@
     <title>DEFAULT</title>
 </head>
 <body>
-<h1>Hello, world</h1>
+<h1 class="hsuper">Hello, world</h1>
 
 
 <?=$view?>
 
 
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script
+    src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
 <script src="/public/bootstrap/js/bootstrap.js" ></script>
+
+<?php foreach($scripts as $value){
+    echo $value;
+} ?>
+
 </body>
 </html>

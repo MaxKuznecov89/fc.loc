@@ -32,5 +32,11 @@ abstract class Controller
     {
         return isset($_SERVER['HTTP_X_REQUESTED_WITH']) && $_SERVER['HTTP_X_REQUESTED_WITH']==='XMLHttpRequest';
     }
+    public function loadView($view,$vars){
+        extract($vars);
+        $path = APP ."/views/".$this->route['controller']."/".$view.".php";
+        include "$path";
+
+    }
 }
 
