@@ -6,7 +6,7 @@ namespace vendor\core;
 
 class Db
 {
-    private static $instDb;
+  use TSingleton;
     private $pdo;
     public static $countSql = 0;
     public static $queries = [];
@@ -42,12 +42,5 @@ public function query($sql,$pram=[]){
     return [];
 }
 
-    static public function instance(){
-        if(!self::$instDb){
-            self::$instDb = new self();
-        }
-            return self::$instDb;
 
-
-    }
 }

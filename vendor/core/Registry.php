@@ -6,9 +6,9 @@ namespace vendor\core;
 
 class Registry
 {
-
+use TSingleton;
     protected $objects = [];
-    private static $instance;
+
     public function __construct($config)
     {
         foreach ($config["cached"] as $name=>$namespace){
@@ -19,13 +19,7 @@ class Registry
 
     }
 
-    public static function getInstance($config)
-    {
-        if(!self::$instance){
-            self::$instance = new self($config);
-        }
-        return self::$instance;
-    }
+
 
     public function __get($name)
     {

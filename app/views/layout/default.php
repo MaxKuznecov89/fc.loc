@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="/public/bootstrap/css/bootstrap.min.css">
-    <title>DEFAULT</title>
+    <?php   \vendor\core\base\View::getMeta();    ?>
 </head>
 <body>
 <h1 class="hsuper">Hello, world</h1>

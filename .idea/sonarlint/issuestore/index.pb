@@ -31,8 +31,6 @@ L
 app/views/layout/default.php,2\1\2197dd9bff3d4bed91b07e6d88774ea223ddf73f
 M
 app/views/layout/mainTest.php,a\d\ad63e2df3b323974bace62b4d29b5e03a7dd1c55
-F
-app/views/Main/bla.php,f\c\fc2efd117b88d0a5ba30effc2d51a93455cd9ca7
 R
 "app/controllers/PageController.php,3\0\3016803478afacc42ab5583358030ce9b1f427da
 U
@@ -57,3 +55,19 @@ D
 vendor/libs/test.php,8\3\83e434bb97caf30b3c098ec80c27fd516334f33c
 ?
 public/test.php,d\2\d28abb6c816c1335743ea831edc5c3f8fb07ebf3
+C
+vendor/core/App.php,6\a\6ae5c029ddaa092d1b141372d05d024f5063730d
+D
+vendor/core/Test.php,1\5\15298e10ec5cdb059391d1b8c62840cdd7d4afc6
+H
+vendor/core/Registry.php,b\8\b86c9def91c766fbfd2de27b087f443095862b50
+A
+config/config.php,4\8\484935103bc36a16b65a3b088e83628fc1601be8
+E
+vendor/libs/Cache.php,f\2\f24200e6cf4c5a8e0eb680ec0242a7cf94c3f4c7
+G
+app/views/Main/test.php,0\6\06b5b4c7815c93de783e876ddddc2e319dc9b72c
+>
+public/myJS.js,2\b\2bdede08578f67a5637323668280a2fedbdee501
+J
+vendor/core/TSingleton.php,1\f\1fcafdb0624e9bd810b709716a6c4f9597fec3fe

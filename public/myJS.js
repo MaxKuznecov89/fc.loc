@@ -6,8 +6,9 @@ $(function () {
             url: '/main/test',
             data: {a:"data for server"},
             success: function(resp) {
-               let hsuper = document.querySelector(".hsuper");
-               hsuper.innerHTML=resp;
+                console.log(resp);
+               // let hsuper = document.querySelector(".hsuper");
+               // hsuper.innerHTML=resp;
             }
         });
     });

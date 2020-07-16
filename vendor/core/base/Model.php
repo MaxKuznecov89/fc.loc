@@ -11,9 +11,9 @@ abstract class Model
     protected $table;
     protected $pk = 'id';
 
-    public function __construct()
+    public function __construct($config)
     {
-        $this->pdo = Db::instance();
+        $this->pdo = Db::getInstance($config);
     }
     public function query($sql){
         $this->pdo->execute($sql);

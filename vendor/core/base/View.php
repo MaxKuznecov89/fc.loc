@@ -10,6 +10,7 @@ class View
     public $view;
     public $layout;
     private $arrScripts =[];
+    private static $metaARR=["title"=>'',"desc"=>'',"keywords"=>''];
 
     public function __construct($route, $layout = '', $view = '')
     {
@@ -69,6 +70,19 @@ class View
 
         }
         return $content;
+    }
+    public static function getMeta(){
+        echo "<title>" . self::$metaARR["title"]. "</title> \n";
+//        echo "\n";
+        echo "<meta name = 'description' content = " . self::$metaARR["desc"] . "> \n";
+        echo "<meta name = 'keywords' content = " . self::$metaARR["keywords"]. "> \n";
+    }
+
+    public static function setMeta($title = '',$desc = '', $keywords = '' )
+    {
+        self::$metaARR["title"] = $title;
+        self::$metaARR["desc"] = $desc;
+        self::$metaARR["keywords"] = $keywords;
     }
 
 }
