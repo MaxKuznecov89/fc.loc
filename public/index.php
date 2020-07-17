@@ -11,11 +11,13 @@ error_reporting(-1);
 use vendor\core\Router;
 use vendor\core\App;
 
+
 require_once "../vendor/libs/functions.php";
 require_once "../config/init.php";
 
 $config = require_once CONF . "/config.php";
 new App($config);
+
 
 
 

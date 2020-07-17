@@ -10,5 +10,6 @@ class App
     public function __construct($config)
     {
         self::$app = Registry::getInstance($config);
+        new ErrorHandler();
     }
 }

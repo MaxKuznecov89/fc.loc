@@ -59,16 +59,15 @@ class Router
                     $inst->getView();
 //
                 } else{
-                    echo "Method $action is not exists!";
+                    throw new \Exception("Method $action is not exists!",404);
                 }
 
             }
             else{
-                echo "class not exists";
+                throw new \Exception("Class not exists",404);
             }
         }else{
-            http_response_code(404);
-            include "404.html";
+            throw new \Exception("Controller not exists",404);
         }
     }
 

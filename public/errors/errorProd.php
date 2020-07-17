@@ -8,6 +8,6 @@
     <title>Error for Client</title>
 </head>
 <body>
-
+<p>Ошибка! Шлюхи заняты! Звоните Никулину</p>
 </body>
 </html>

@@ -8,6 +8,6 @@
     <title>Error for Development</title>
 </head>
 <body>
-
+<?= $strErr ?>
 </body>
 </html>
