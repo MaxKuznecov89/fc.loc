@@ -76,3 +76,9 @@
  На строке: 19 
  Код ошибки: 503 
 =========================
+2020-07-21T11:31:08+03:00  
+ Сообщение ошибки: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SELECT *  -- keep-cache' at line 1 
+ Ошибка произошла в файле: C:\OpenServer\domains\fs.loc\vendor\libs\rb-mysql.php 
+ На строке: 810 
+ Код ошибки: 503 
+=========================

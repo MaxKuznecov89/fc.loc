@@ -12,13 +12,24 @@
 
 <?=$view?>
 
+    <?=$menu=new \vendor\core\widgets\menu\Menu();
+        $menu->output();
+    ?>
+
+
 
 
 <script
     src="https://code.jquery.com/jquery-3.5.1.js"
     integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
     crossorigin="anonymous"></script>
+
 <script src="/public/bootstrap/js/bootstrap.js" ></script>
+<script src="/public/js/jquery.cookie.js" ></script>
+<script src="/public/js/jquery.accordion.js" ></script>
+<script src="/public/test.js" ></script>
+
+
 
 <?php foreach($scripts as $value){
     echo $value;
