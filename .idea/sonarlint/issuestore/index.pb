@@ -10,8 +10,6 @@ I
 F
 vendor/core/Router.php,a\f\af2f8d6afa82a2cf03833bf6f497dada63fdbf50
 ?
-public/404.html,9\1\9165de4c08ed7f75a6e91e356e892f20aa817eb8
-?
 config/init.php,2\2\22c288a7d91926c7d21fade6bf901c8fcada7bb8
 L
 app/views/Posts/testPage.php,3\a\3a7e47948a06a078cef4981ccca04b9773e500e0
@@ -71,3 +69,9 @@ G
 public/myJS.js,2\b\2bdede08578f67a5637323668280a2fedbdee501
 J
 vendor/core/TSingleton.php,1\f\1fcafdb0624e9bd810b709716a6c4f9597fec3fe
+J
+public/errors/errorDev.php,c\c\cc94939f3f67f2c7f902539bfa5ea2b7bcb0f789
+K
+public/errors/errorProd.php,2\a\2a86c34f1d50beb9848bab140b72e8d0ee722c95
+L
+vendor/core/ErrorHandler.php,d\f\df296e1add21eff5945f93bb68283b02d7c866d8

@@ -58,3 +58,21 @@
  На строке: 71 
  Код ошибки: 2 
 =========================
+2020-07-20T10:52:44+03:00  
+ Сообщение ошибки: Undefined offset: 1 
+ Ошибка произошла в файле: C:\openserver\domains\fc.loc\app\controllers\MainController.php 
+ На строке: 17 
+ Код ошибки: 8 
+=========================
+2020-07-20T11:33:34+03:00  
+ Сообщение ошибки: Use of undefined constant y - assumed 'y' (this will throw an Error in a future version of PHP) 
+ Ошибка произошла в файле: C:\openserver\domains\fc.loc\app\controllers\MainController.php 
+ На строке: 19 
+ Код ошибки: 2 
+=========================
+2020-07-20T11:33:43+03:00  
+ Сообщение ошибки: Call to undefined function app\controllers\y() 
+ Ошибка произошла в файле: C:\openserver\domains\fc.loc\app\controllers\MainController.php 
+ На строке: 19 
+ Код ошибки: 503 
+=========================

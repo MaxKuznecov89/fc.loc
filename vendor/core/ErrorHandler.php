@@ -33,7 +33,7 @@ public function exceptionHandler($exception){
     $strErr = $this->createErrMes($errno, $exception->getMessage(), $exception->getFile(),
         $exception->getLine(),$exception->getTrace());
 
-    $this->selectIncludeFile($strErr,$errno);
+    $this->selectIncludeFile($strErr,$errno, true);
 }
 
 
@@ -57,14 +57,17 @@ public function createErrMes($errno, $errstr, $errfile, $errline,$errstack=false
     return date(DATE_ATOM)."  \n Сообщение ошибки: $errstr \n Ошибка произошла в файле: $errfile \n На строке: $errline \n Код ошибки: $errno \n=========================\n";
 
 }
-public function selectIncludeFile($strErr,$errno){
+public function selectIncludeFile($strErr,$errno,$criticalError = false){
     if(DEBUG){
         require_once  ERROR."/errorDev.php";
+        die();
     } else if(!DEBUG & $errno==404){
         include ERROR."/404.html";
         die();
     }
-    else{
+    else if(!DEBUG & !$criticalError){
+        error_log($strErr,3,ERROR."/log_error.txt");
+    } else{
         require_once  ERROR."/errorProd.php";
         error_log($strErr,3,ERROR."/log_error.txt");
         die();

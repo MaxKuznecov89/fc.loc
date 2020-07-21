@@ -14,8 +14,8 @@ class MainController extends AppController
         new Main($config);
         View::setMeta("ШлюхинДоволен","fuck you ass", "hookers");
         $res = \R::find("people", "name = ?", ["Dima"]);
-        $name = $res[1]["name"];
-        $age = $res[1]["id"];
+        $name = $res[3]["name"];
+        $age = $res[3]["id"];
         $this->set(compact("name","age"));
     }
 
