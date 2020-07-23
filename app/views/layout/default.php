@@ -12,8 +12,7 @@
 
 <?=$view?>
 
-    <?=$menu=new \vendor\core\widgets\menu\Menu();
-        $menu->output();
+    <?php $menu=new \vendor\core\widgets\menu\Menu();
     ?>
 
 

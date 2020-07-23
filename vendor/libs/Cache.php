@@ -17,9 +17,11 @@ public function set($name,$data,$time= 3600){
 }
 public function get($name){
     $filename = CACHE . '/' . md5($name) . ".txt";
-    if($fStr = file_get_contents($filename)){
+    if(file_exists($filename)){
+        $fStr = file_get_contents($filename);
         $data = unserialize($fStr);
         if($data["end_time"] >= time()){
+
             return $data['data'];
         }
             unlink($filename);

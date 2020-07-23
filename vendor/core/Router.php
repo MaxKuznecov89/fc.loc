@@ -25,6 +25,8 @@ class Router
 
 
         foreach (self::$routes as $pattern=>$route){
+
+
             if(preg_match($pattern, $url,$matches)){
                foreach ($matches as $key => $value){
                    if(is_string($key)){
@@ -35,9 +37,15 @@ class Router
                 if(!isset($route["action"])){
                     $route["action"] = "index";
                 }
+                if(!isset($route["prefix"])){
+                    $route["prefix"] = "";
+                }else{
+                    $route["prefix"] = "\\" . $route["prefix"];
+                }
 
                 $route["controller"] = self::upperCamelCase($route["controller"]);
                 self::$route = $route;
+                debug($route);
                 return true;
             }
         }
@@ -48,8 +56,8 @@ class Router
 
         $url = self::urlFreeGetParam($url);
         if(self::matchRoute($url)){
-            $controller = "app\controllers\\" . self::$route['controller'] . "Controller";
-
+            $controller = "app\controllers" . self::$route['prefix']. "\\" . self::$route['controller'] . "Controller";
+            echo $controller;
             if(class_exists($controller)){
                 $inst = new $controller(self::$route);
                 $action = self::lowerFirstUpperNext(self::$route['action']) . "Action";

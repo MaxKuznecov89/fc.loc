@@ -4,6 +4,9 @@
 namespace vendor\core\widgets\menu;
 
 
+
+use vendor\libs\Cache;
+
 class Menu
 {
     protected $date;
@@ -30,14 +33,21 @@ class Menu
     }
 
     public function run(){
-        $date = \R::getAssoc("select * from $this->table");
-        $this->tree = $this->map_tree($date);
-        $this->menuhtml = $this->categories_to_string($this->tree);
+        $cache = new Cache();
+        $this->menuhtml = $cache->get("widget_menu");
+
+        if(!$this->menuhtml){
+            $date = \R::getAssoc("select * from $this->table");
+            $this->tree = $this->map_tree($date);
+            $this->menuhtml = $this->categories_to_string($this->tree);
+            $cache->set("widget_menu", $this->menuhtml);
+        }
+        $this->output();
 
     }
 
     public function output(){
-        echo "<$this->container>";
+        echo "<$this->container id=\"accordion\" class=\"menu\">";
             echo $this->menuhtml;
         echo "</$this->container>";
     }

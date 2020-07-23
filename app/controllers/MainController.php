@@ -14,7 +14,7 @@ class MainController extends AppController
         $config = require_once CONF . "/config.php";
         new Main($config);
         View::setMeta("ШлюхинДоволен","fuck you ass", "hookers");
-        $res = \R::find("people", "name = ?", ["Dima"]);
+        $res = \R::find("people", "id = 1");
         $name = $res[1]["name"];
         $age = $res[1]["id"];
 

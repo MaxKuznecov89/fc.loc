@@ -22,14 +22,14 @@ public function __construct()
 }
 
 public function errorHandler($errno, $errstr, $errfile, $errline){
-    header("HTTP/1.0 505 Inner error");
+//    header("HTTP/1.0 505 Inner error");
     $strErr = $this->createErrMes($errno, $errstr, $errfile, $errline);
     $this->selectIncludeFile($strErr,505);
 
 }
 public function exceptionHandler($exception){
     $errno = $exception->getCode()?:503;
-    header("HTTP/1.0 $errno");
+//    header("HTTP/1.0 $errno");
     $strErr = $this->createErrMes($errno, $exception->getMessage(), $exception->getFile(),
         $exception->getLine(),$exception->getTrace());
 
