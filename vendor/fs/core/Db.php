@@ -1,11 +1,12 @@
 <?php
 
 
-namespace vendor\core;
+namespace fs\core;
 
 
 class Db
 {
+
   use TSingleton;
     private $pdo;
     public static $countSql = 0;
@@ -41,6 +42,8 @@ public function query($sql,$pram=[]){
     }
     return [];
 }
+
+
 
 
 }

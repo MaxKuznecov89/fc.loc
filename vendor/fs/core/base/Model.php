@@ -1,9 +1,9 @@
 <?php
 
 
-namespace vendor\core\base;
+namespace fs\core\base;
 
-use vendor\core\Db;
+use fs\core\Db;
 
 abstract class Model
 {

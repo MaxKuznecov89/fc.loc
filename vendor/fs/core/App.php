@@ -1,7 +1,7 @@
 <?php
 
 
-namespace vendor\core;
+namespace fs\core;
 
 
 class App

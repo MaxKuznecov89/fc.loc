@@ -1,6 +1,6 @@
 <?php
 
-namespace vendor\core;
+namespace fs\core;
 
 trait TSingleton{
     private static $instance;

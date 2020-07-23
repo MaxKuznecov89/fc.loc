@@ -1,7 +1,7 @@
 <?php
 return [
     "cached"=>[
-        'Test'=>'vendor\core',
-        'Cache'=>'vendor\libs'
+        'Test'=>'fs\core',
+        'Cache'=>'fs\libs'
         ]
 ];

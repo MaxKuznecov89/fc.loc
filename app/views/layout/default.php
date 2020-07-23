@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="/public/bootstrap/css/bootstrap.min.css">
-    <?php   \vendor\core\base\View::getMeta();    ?>
+    <?php   \fs\core\base\View::getMeta();    ?>
 </head>
 <body>
 <h1 class="hsuper">Hello, world</h1>
@@ -12,7 +12,7 @@
 
 <?=$view?>
 
-    <?php $menu=new \vendor\core\widgets\menu\Menu();
+    <?php $menu=new fs\core\widgets\menu\Menu();
     ?>
 
 

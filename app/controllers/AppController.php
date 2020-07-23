@@ -4,7 +4,7 @@
 namespace app\controllers;
 
 
-use vendor\core\base\Controller;
+use fs\core\base\Controller;
 
 class AppController extends Controller
 {

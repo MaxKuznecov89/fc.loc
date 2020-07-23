@@ -1,7 +1,7 @@
 <?php
 
 
-namespace vendor\core\base;
+namespace fs\core\base;
 
 
 class View

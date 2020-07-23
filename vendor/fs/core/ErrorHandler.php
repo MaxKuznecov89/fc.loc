@@ -1,7 +1,7 @@
 <?php
 
 
-namespace vendor\core;
+namespace fs\core;
 
 
 class ErrorHandler
@@ -59,16 +59,16 @@ public function createErrMes($errno, $errstr, $errfile, $errline,$errstack=false
 }
 public function selectIncludeFile($strErr,$errno,$criticalError = false){
     if(DEBUG){
-        require_once  ERROR."/errorDev.php";
+        require_once ERROR . "/errorDev.php";
         die();
     } else if(!DEBUG & $errno==404){
-        include ERROR."/404.html";
+        include ERROR . "/404.html";
         die();
     }
     else if(!DEBUG & !$criticalError){
         error_log($strErr,3,ERROR."/log_error.txt");
     } else{
-        require_once  ERROR."/errorProd.php";
+        require_once ERROR . "/errorProd.php";
         error_log($strErr,3,ERROR."/log_error.txt");
         die();
     }

@@ -1,6 +1,6 @@
 <?php
 
-namespace vendor\core;
+namespace fs\core;
 
 class Router
 {
@@ -57,7 +57,9 @@ class Router
         $url = self::urlFreeGetParam($url);
         if(self::matchRoute($url)){
             $controller = "app\controllers" . self::$route['prefix']. "\\" . self::$route['controller'] . "Controller";
+
             echo $controller;
+
             if(class_exists($controller)){
                 $inst = new $controller(self::$route);
                 $action = self::lowerFirstUpperNext(self::$route['action']) . "Action";
@@ -107,3 +109,4 @@ class Router
         return $url;
     }
 }
+

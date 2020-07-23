@@ -1,21 +1,20 @@
 <?php
-spl_autoload_register(function ($className){
 
 
-    $file = ROOT . "/$className.php";
-    $file = str_replace('\\','/',$file);
-    if(file_exists($file)){require_once "$file";}
-
-});
 error_reporting(-1);
-use vendor\core\Router;
-use vendor\core\App;
+use fs\core\Router;
+use fs\core\App;
 
+require_once "../vendor/autoload.php";
 
-require_once "../vendor/libs/functions.php";
+require_once "../vendor/fs/libs/functions.php";
 require_once "../config/init.php";
 
 $config = require_once CONF . "/config.php";
+
+
+
+
 new App($config);
 
 

@@ -1,11 +1,11 @@
 <?php
 
 
-namespace vendor\core\widgets\menu;
+namespace fs\core\widgets\menu;
 
 
 
-use vendor\libs\Cache;
+use fs\libs\Cache;
 
 class Menu
 {

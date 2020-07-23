@@ -11715,7 +11715,7 @@ class Facade
 	/**
 	 * Kickstarts redbean for you. This method should be called before you start using
 	 * RedBeanPHP. The Setup() method can be called without any arguments, in this case it will
-	 * try to create a SQLite database in /tmp called red.db (this only works on UNIX-like systems).
+	 * try to create a SQLite database in /temp called red.db (this only works on UNIX-like systems).
 	 *
 	 * Usage:
 	 *
@@ -11864,7 +11864,7 @@ class Facade
 	 * Usage:
 	 *
 	 * <code>
-	 * R::addDatabase( 'database-1', 'sqlite:/tmp/db1.txt' );
+	 * R::addDatabase( 'database-1', 'sqlite:/temp/db1.txt' );
 	 * R::selectDatabase( 'database-1' ); //to select database again
 	 * </code>
 	 *
@@ -11892,7 +11892,7 @@ class Facade
 	 * Creates a toolbox. This method can be called if you want to use redbean non-static.
    * It has the same interface as R::setup(). The createToolbx() method can be called
    * without any arguments, in this case it will try to create a SQLite database in
-   * /tmp called red.db (this only works on UNIX-like systems).
+   * /temp called red.db (this only works on UNIX-like systems).
 	 *
 	 * Usage:
 	 *
@@ -14326,7 +14326,7 @@ class Facade
 	 *          WHERE region = :region ',
 	 *          array( ':region' => 'Denmark' ),
 	 *          array( 'city', 'population' ),
-	 *          '/tmp/cities.csv'
+	 *          '/temp/cities.csv'
 	 * );
 	 * </code>
 	 *
@@ -14344,7 +14344,7 @@ class Facade
 	 *
 	 * @return void
 	 */
-	public static function csv( $sql = '', $bindings = array(), $columns = NULL, $path = '/tmp/redexport_%s.csv', $output = TRUE )
+	public static function csv( $sql = '', $bindings = array(), $columns = NULL, $path = '/temp/redexport_%s.csv', $output = TRUE )
 	{
 		$quickExport = new QuickExport( self::$toolbox );
 		$quickExport->csv( $sql, $bindings, $columns, $path, $output );
@@ -15818,7 +15818,7 @@ class QuickExport
 	 *   WHERE region = :region ',
 	 *   array( ':region' => 'Denmark' ),
 	 *   array( 'city', 'population' ),
-	 *   '/tmp/cities.csv'
+	 *   '/temp/cities.csv'
 	 * );
 	 * </code>
 	 *
@@ -15836,7 +15836,7 @@ class QuickExport
 	 *
 	 * @return void
 	 */
-	public function csv( $sql = '', $bindings = array(), $columns = NULL, $path = '/tmp/redexport_%s.csv', $output = TRUE, $options = array(',','"','\\') )
+	public function csv( $sql = '', $bindings = array(), $columns = NULL, $path = '/temp/redexport_%s.csv', $output = TRUE, $options = array(',','"','\\') )
 	{
 		list( $delimiter, $enclosure, $escapeChar ) = $options;
 		$path = sprintf( $path, date('Ymd_his') );

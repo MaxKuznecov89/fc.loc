@@ -1,9 +1,9 @@
 <?php
 namespace app\controllers;
 use app\model\Main;
-use vendor\core\App;
-use vendor\core\base\View;
-use vendor\core\widgets\menu\Menu;
+use fs\core\App;
+use fs\core\base\View;
+use fs\core\widgets\menu\Menu;
 
 
 class MainController extends AppController

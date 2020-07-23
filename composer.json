@@ -1,0 +1,16 @@
+{
+    "name": "fs/fs",
+    "authors": [
+        {
+            "name": "Max",
+            "email": "Max@mail.ru"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "fs\\": "vendor/fs",
+            "app\\": "app"
+        }
+    }
+}
