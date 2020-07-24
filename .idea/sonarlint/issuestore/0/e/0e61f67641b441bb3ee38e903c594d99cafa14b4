@@ -1,4 +1,4 @@
 
-d	php:S1848"HEither remove this useless object instantiation of class "App" or use it(Î×Ü¸8áÅã´.
-c	php:S1192"GDefine a constant instead of duplicating this literal "action" 3 times.(¢¨ó¿8ˆŸÂ¯·.
-l	php:S1192"KDefine a constant instead of duplicating this literal "controller" 4 times.(¢ùÌŸøÿÿÿÿ8ÛÂââ´.
+?php:S125"Remove this commented out code.(‰€şùÿÿÿÿ8äÎáş·.
+d	php:S1848"HEither remove this useless object instantiation of class "App" or use it(Î×Ü¸8‹Ç—ş·.
+:php:S125"Remove this commented out code.(úÀ‹ˆ8¸Ñ´¸.

@@ -11,8 +11,9 @@ class MainController extends AppController
 
     public function indexAction(){
 
-        $config = require_once CONF . "/config.php";
-        new Main($config);
+
+        new Main();
+
         View::setMeta("ШлюхинДоволен","fuck you ass", "hookers");
         $res = \R::find("people", "id = 1");
         $name = $res[1]["name"];

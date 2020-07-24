@@ -6,7 +6,9 @@
             "email": "Max@mail.ru"
         }
     ],
-    "require": {},
+    "require": {
+        "vlucas/valitron": "^1.4"
+    },
     "autoload": {
         "psr-4": {
             "fs\\": "vendor/fs",

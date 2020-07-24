@@ -45,7 +45,7 @@ class Router
 
                 $route["controller"] = self::upperCamelCase($route["controller"]);
                 self::$route = $route;
-                debug($route);
+
                 return true;
             }
         }
@@ -58,7 +58,7 @@ class Router
         if(self::matchRoute($url)){
             $controller = "app\controllers" . self::$route['prefix']. "\\" . self::$route['controller'] . "Controller";
 
-            echo $controller;
+
 
             if(class_exists($controller)){
                 $inst = new $controller(self::$route);
