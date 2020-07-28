@@ -20,11 +20,25 @@ class UserController extends AppController
         $this->layout = 'defaultMain';
 
         if(!empty($_POST)){
-            $this->layout = 'mainTest';
-            $this->view = "successSignin";
+
 
             $instModelUser = new User();
             $instModelUser->load($_POST);
+
+            if(!($instModelUser->validate($_POST))){
+                $instModelUser->getErrors();
+                redirect();
+
+            }
+
+            if($instModelUser->save("users"))
+            {
+                $_SESSION['success'] = "Все заебок";
+
+            }else{
+                $_SESSION['error'] = "Все бесполезно - ты лох!! База - сдох!!))";
+            }
+            redirect();
 
         }
     }

@@ -12,18 +12,9 @@ require_once "../config/init.php";
 
 $config = require CONF . "/config.php";
 
-//$config1 = require_once CONF . "/config.php";
-//$config1 = require_once ROOT . "/vendor/fs/core/base/test.php";
-
 
 
 new App($config);
-
-//
-//
-//
-//Router::add('#^page/(?P<action>[a-z-]+)/(?P<alias>[a-z-]+)$#', ["controller" => "Page"]);
-//Router::add('#^page/(?P<alias>[a-z-]+)$#', ["controller" => "Page","action"=>"view"]);
 
 
 Router::add('#^admin$#', ["controller" => "Main", "action"=>"index","prefix"=>"admin"]);
