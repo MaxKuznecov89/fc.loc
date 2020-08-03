@@ -57,10 +57,13 @@ abstract class Model
 
     public function save($table)
     {
-         $tbl = \R::dispense($table);
-         foreach ($this->attributes as $key=>$value){
-             $tbl->$key = $value;
-         }
-         return \R::store($tbl);
+
+            $tbl = \R::dispense($table);
+            foreach ($this->attributes as $key => $value) {
+                $tbl->$key = $value;
+            }
+            return \R::store($tbl);
+
     }
+
 }

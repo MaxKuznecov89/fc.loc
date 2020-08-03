@@ -46,7 +46,7 @@ class Router
                 $route["controller"] = self::upperCamelCase($route["controller"]);
                 self::$route = $route;
 
-                return true;
+                              return true;
             }
         }
         return false;
@@ -57,6 +57,7 @@ class Router
         $url = self::urlFreeGetParam($url);
         if(self::matchRoute($url)){
             $controller = "app\controllers" . self::$route['prefix']. "\\" . self::$route['controller'] . "Controller";
+//            echo $controller;
 
 
 
@@ -77,6 +78,8 @@ class Router
                 throw new \Exception("Class not exists",404);
             }
         }else{
+            $controller = "app\controllers" . self::$route['prefix']. "\\" . self::$route['controller'] . "Controller";
+            var_dump( self::$route['controller']);
             throw new \Exception("Controller not exists",404);
         }
     }

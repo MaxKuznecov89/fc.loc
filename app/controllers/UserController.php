@@ -25,20 +25,22 @@ class UserController extends AppController
             $instModelUser = new User();
             $instModelUser->load($_POST);
 
-            if(!($instModelUser->validate($_POST))){
+            if(!($instModelUser->validate($_POST)) ||!($instModelUser->checkUnique())){
                 $instModelUser->getErrors();
                 redirect();
 
             }
 
+            $instModelUser->attributes["password"] =  md5($instModelUser->attributes["password"]);
+
             if($instModelUser->save("users"))
             {
-                $_SESSION['success'] = "Все заебок";
+                $_SESSION['success'] = "Все заебок 12345";
 
             }else{
                 $_SESSION['error'] = "Все бесполезно - ты лох!! База - сдох!!))";
             }
-            redirect();
+//            redirect();
 
         }
     }
