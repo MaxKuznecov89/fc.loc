@@ -4,6 +4,8 @@
 namespace fs\core;
 
 
+use Valitron\Validator;
+
 class App
 {
     public static $app;
@@ -11,5 +13,6 @@ class App
     {
         session_start();
         self::$app = Registry::getInstance($config);
+        Validator::lang("ru");
     }
 }

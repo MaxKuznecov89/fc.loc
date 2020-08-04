@@ -13,6 +13,18 @@ class UserController extends AppController
     }
 
     public function loginAction(){
+        $this->layout = 'defaultMain';
+        if(!empty($_POST)){
+            $instModelUser = new User();
+
+            if($instModelUser->login()){
+                echo "you are login";
+                return;
+            }
+            echo "pizda!!!";
+        }
+
+
 
     }
 
@@ -27,11 +39,12 @@ class UserController extends AppController
 
             if(!($instModelUser->validate($_POST)) ||!($instModelUser->checkUnique())){
                 $instModelUser->getErrors();
+                $_SESSION['from_date'] = $_POST;
                 redirect();
 
             }
 
-            $instModelUser->attributes["password"] =  md5($instModelUser->attributes["password"]);
+            $instModelUser->attributes["password"] =  password_hash($instModelUser->attributes["password"], PASSWORD_BCRYPT);
 
             if($instModelUser->save("users"))
             {
@@ -40,7 +53,7 @@ class UserController extends AppController
             }else{
                 $_SESSION['error'] = "Все бесполезно - ты лох!! База - сдох!!))";
             }
-//            redirect();
+            redirect();
 
         }
     }
