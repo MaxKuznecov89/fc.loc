@@ -1,6 +1,11 @@
-<h1> View index Main </h1>
-<p>я есть <?= $name ?></p>
-<p>мой блядский номер  <?= $age ?> такой</p>
-<button class = "orderHockers"> закажи меня </button>
+<?php
+foreach ($res as $key=>$val){
+    echo "</br>";
+    echo "<h3>".$val["title"]."</h3>";
+    echo "</br>";
+}
+
+
+?>
+<?=$pag?>
 <script src="/public/myJS.js"></script>
-<script>console.log(3)</script>

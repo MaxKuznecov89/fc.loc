@@ -49,7 +49,7 @@ class User extends Model
                 if(password_verify($pass, $user["password"])){
                    foreach ($user as $key=>$value){
                        if($key != 'password'){
-                       $_SESSION[$key] = $value;
+                       $_SESSION["user"][$key] = $value;
                    }
 
                    }

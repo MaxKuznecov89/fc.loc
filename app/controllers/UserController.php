@@ -9,7 +9,10 @@ use app\model\User;
 class UserController extends AppController
 {
     public function logoutAction(){
-
+        if(isset($_SESSION["user"])){
+            unset($_SESSION["user"]);
+        }
+        redirect();
     }
 
     public function loginAction(){
@@ -18,10 +21,12 @@ class UserController extends AppController
             $instModelUser = new User();
 
             if($instModelUser->login()){
-                echo "you are login";
-                return;
+                $_SESSION["success"]= "you are login";
+
+            }else{
+                $_SESSION["error"]= "log/pass is error";
             }
-            echo "pizda!!!";
+            redirect();
         }
 
 

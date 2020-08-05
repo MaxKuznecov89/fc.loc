@@ -24,6 +24,27 @@ class View
         $this->view = $view;
     }
 
+    public function sanitize_output($buffer) {
+
+        $search = array(
+            '/\>[^\S ]+/s',     // strip whitespaces after tags, except space
+            '/[^\S ]+\</s',     // strip whitespaces before tags, except space
+            '/(\s)+/s',         // shorten multiple whitespace sequences
+            '/<!--(.|\s)*?-->/' // Remove HTML comments
+        );
+
+        $replace = array(
+            '>',
+            '<',
+            '\\1',
+            ''
+        );
+
+        $buffer = preg_replace($search, $replace, $buffer);
+
+        return $buffer;
+    }
+
     public function render($vars)
     {
        if(is_array($vars)) {
@@ -42,7 +63,7 @@ class View
         }
 
         $view = ob_get_clean();
-
+    
         if ($this->layout !== false) {
             $pathLayout = APP . "/views/layout/{$this->layout}.php";
 
@@ -52,7 +73,13 @@ class View
                 if(!empty($this->arrScripts)){
                     $scripts=$this->arrScripts[0];
                 }
+                ob_start("gzencode");
+                ob_start([$this,"sanitize_output"]);
+                header('Content-Encoding: gzip');
                 include "$pathLayout";
+                ob_end_flush();
+                ob_end_flush();
+
             } else {
                 echo "<p>Layout <b>$pathLayout</b> not found</p>";
             }
